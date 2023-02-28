@@ -1,15 +1,283 @@
 /* These styles are just to make it easier to see the blocks, initially. */
-
-body { padding: 2em; }
-
-a { color: blue; }
-em { font-style: italic; }
 strong { font-weight: bold; }
 
-body,
+/* body,
 section,
 ul,
 figure {
 	display: grid;
 	gap: 1em;
+} */
+
+/* || TYPOGRAPHY */
+
+/* Mori */
+
+/*|| TYPOGRAPHY */
+
+@font-face {
+	font-family: 'NeueBit';
+	src: url('assets/PPNeueBit-Regular.woff2');
+	font-weight: 400;
+ }
+
+@font-face {
+	font-family: 'NeueBit';
+	src: url('assets/PPNeueBit-Bold.woff2');
+	font-weight: 700;
+ }
+
+/* Argent */
+
+@font-face {
+	font-family: 'Argent';
+	src: url('Argent/ArgentPixelCF-Italic.woff2');
+ }
+
+/* Neuebit */
+
+@font-face {
+	font-family: 'Neuebit';
+	src: url('PPNeuebit/PPNeueBit-Regular.woff2');
+	weight: 400px;
+}
+
+
+/*|| VARIABLES */ 
+
+/* FOR MOBILE */
+
+:root{
+    --border-radius:12px;
+    --gap: 40px;
+    --padding: 40px;
+
+    --bg-color: rgb(255, 255, 255);
+	--main-color: black;
+
+	--gallery-height: none;
+
+
+    /* typescale */
+  
+    --text-xl: calc(var(--text-base)*4);
+	--text-lg: calc(var(--text-base)*1.125);
+	--text-base: 30px;
+	--text-sm: calc(var(--text-base)*0.875);
+	--text-xs: calc(var(--text-base)*0.6);
+
+	--gallery-height: 5000px;
+  
+}
+
+/* || DESKTOP */
+
+@media (min-width:550px) {
+    :root {
+    --bg-color: rgb(230, 230, 230);
+
+	/* typescale */
+
+	--text-xl: calc(var(--text-base)*8);
+    
+    }
+}
+
+
+/* LINKS */
+
+/* \00a0 is space */
+#channel-url::before {
+	content: url("https://svgshare.com/i/qgF.svg");
+	margin-right: 5px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+  }
+  
+.link-title::before {
+	content: url("https://svgshare.com/i/qgd.svg");
+	margin-right: 5px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+.link-title {
+	padding: 8px;
+}
+
+a {
+	text-decoration: underline 2px;
+	text-underline-offset: 4px;
+}
+
+body {
+	font-family: 'Neuebit', monospace;
+	background-color: var(--bg-color);
+	font-size: var(--text-base);
+	
+}
+
+main{
+	padding: var(--padding);
+}
+/* || TYPOGRAPHY*/
+
+h1 {
+	font-family: 'Argent';
+	font-style: italic;
+    font-size: var(--text-xl);
+}
+
+p{
+    font-family: 'Neuebit', monospace;
+    font-weight: 400;
+    font-size: var(--text-base);
+	
+}
+
+.small{ 
+	font-size: var(--text-xs);
+}
+
+
+/* || Blocks */
+
+.image-blocks {
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap) var(--gap);
+	flex-wrap: wrap;
+	max-width: 250px;
+	/* max-height: var(--gallery-height); */
+
+	/* display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 20px;
+	gap: var(--gap) var(--gap);
+	 */
+}
+
+.image-block{
+	height: auto;
+}
+
+.red {
+	border: 3px solid var(--main-color);
+	box-shadow: 10px 10px 0px var(--main-color);
+}
+
+.red:hover{
+	border: 3px solid var(--main-color);
+	box-shadow: 0px 0px 0px var(--main-color);
+}
+
+figure.img {
+	display: block;
+	width: 100%; 
+}
+
+/* || flexbox */
+
+.bar {
+	display: flex;
+	gap: 10px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	padding-left: 8px;
+	padding-right: 8px;
+	align-items: end;
+
+}
+
+.svg{
+	height: 16px;
+	min-width: 16px;
+	width: auto;
+	object-fit: cover;
+}
+
+.image {
+	border-top: 3px solid var(--main-color);
+	border-bottom: 3px solid var(--main-color);
+	min-width: 250px;
+}
+
+li {
+	transition: 0.3s;
+}
+
+li:hover {
+	transform: translate(-5px, -10px);
+  }
+
+
+/* button */
+
+button {
+	display: block;
+	border: black 1px solid;
+	color: white;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 10px;
+	background-color: black;
+	box-shadow: 
+	8px 0px 0px -4px black, 
+	-8px 0px 0px -4px black, 
+	16px 0px 0px -8px black, 
+	-16px 0px 0px -8px black;
+	margin: 8px;
+}
+
+/* button::after {
+	content: url("https://svgshare.com/f/qj4");
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+} */
+
+/* scrolling animation   */
+
+.scroll-left {
+height: 500px; 
+overflow: hidden;
+position: relative;
+}
+.scroll-left h1 {
+position: absolute;
+width: 100%;
+height: 100%;
+margin: 0;
+line-height: 500px;
+text-align: center;
+
+/* Starting position */
+-moz-transform:translateX(100%);
+-webkit-transform:translateX(100%); 
+transform:translateX(100%);
+
+/* Apply animation to this element */ 
+-moz-animation: scroll-left 10s linear infinite;
+-webkit-animation: scroll-left 10s linear infinite;
+animation: scroll-left 10s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-webkit-keyframes scroll-left {
+0% { -webkit-transform: translateX(100%); }
+100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+0% { 
+-webkit-transform: translateX(100%); /* Browser bug fix */
+transform: translateX(100%); 
+}
+
+100% { 
+-webkit-transform: translateX(-100%); /* Browser bug fix */
+transform: translateX(-100%); 
+}
 }

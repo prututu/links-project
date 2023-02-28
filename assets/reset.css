@@ -47,10 +47,14 @@ iframe {
 	border: unset;
 }
 
+ul,li {
+	margin:0;
 
+}
 
 /* Disclosure triangles. */
 details ::marker,
 details ::-webkit-details-marker {
 	display: none;
 }
+

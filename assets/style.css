@@ -153,7 +153,7 @@ main{
 .channel-owner, .channel-collaborator {
 	font-family: 'Argent';
 	font-style: italic;
-	font-size: 20px;
+	font-size: 12px;
 }
 
 .ownercollaborator {

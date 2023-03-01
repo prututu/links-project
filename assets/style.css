@@ -62,7 +62,7 @@ strong { font-weight: bold; }
 	--text-lg: calc(var(--text-base)*1.125);
 	--text-base: 30px;
 	--text-sm: calc(var(--text-base)*0.875);
-	--text-xs: calc(var(--text-base)*0.6);
+	--text-xs: calc(var(--text-base)*0.3);
 
 	--gallery-height: 5000px;
 	--des-width: 90vw;

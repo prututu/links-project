@@ -51,12 +51,14 @@ strong { font-weight: bold; }
 	--main-color: black;
 
 	--gallery-height: none;
-	--height: 100px;
+	--height: 350px;
+
+	--contributor-gap: 20px
 
 
     /* typescale */
   
-    --text-xl: calc(var(--text-base)*6);
+    --text-xl: calc(var(--text-base)*5);
 	--text-lg: calc(var(--text-base)*1.125);
 	--text-base: 30px;
 	--text-sm: calc(var(--text-base)*0.875);
@@ -64,7 +66,7 @@ strong { font-weight: bold; }
 
 	--gallery-height: 5000px;
 	--des-width: 90vw;
-	--height: 350px;
+	
 }
 
 /* || DESKTOP */
@@ -73,6 +75,9 @@ strong { font-weight: bold; }
     :root {
 	--padding: 30px;
 	--des-width: 80vw;
+	--height: 400px;
+
+	--contributor-gap: 200px;
 
 	/* typescale */
 
@@ -131,7 +136,7 @@ main{
 .ownercollaborator {
 	display: flex;
 	padding: var(--padding);
-	gap: 200px;
+	gap: var(--contributor-gap);
 	margin-bottom: 10px;
 	border-bottom: 3px solid black;
 
@@ -159,6 +164,15 @@ body {
 	max-width: var(--des-width);
 	font-family: 'mondwest';
 	font-weight: 400;
+}
+
+@media (min-width:650px) {
+	
+	.channel-description {
+		max-width: var(--des-width);
+		font-family: 'mondwest';
+		font-weight: 400;
+	}
 }
 
 .bottom-padding {

@@ -154,7 +154,7 @@ main{
 	font-family: 'Argent';
 	line-height: 50%;
 	font-style: italic;
-	font-size: var(--text-sm);
+	font-size: var(--text-base);
 }
 
 .ownercollaborator {

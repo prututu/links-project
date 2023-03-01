@@ -152,7 +152,9 @@ main{
 
 .channel-owner, .channel-collaborator {
 	font-family: 'Argent';
+	line-height: 90%;
 	font-style: italic;
+	font-size: var(--text-xs);
 }
 
 .ownercollaborator {
@@ -160,7 +162,7 @@ main{
 	padding: var(--padding);
 	gap: var(--contributor-gap);
 	margin-bottom: 10px;
-	border-bottom: 3px solid black;
+	/* border-bottom: 3px solid black; */
 
 }
 

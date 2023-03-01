@@ -53,12 +53,12 @@ strong { font-weight: bold; }
 	--gallery-height: none;
 	--height: 350px;
 
-	--contributor-gap: 20px
+	--contributor-gap: 20px;
 
 
     /* typescale */
   
-    --text-xl: calc(var(--text-base)*5);
+    --text-xl: calc(var(--text-base)*6);
 	--text-lg: calc(var(--text-base)*1.125);
 	--text-base: 30px;
 	--text-sm: calc(var(--text-base)*0.875);
@@ -90,14 +90,38 @@ strong { font-weight: bold; }
 /* LINKS */
 
 /* \00a0 is space */
-#channel-url::before {
-	content: url("https://svgshare.com/i/qgF.svg");
-	margin-right: 5px;
+.arena {
+	padding-top: 5px;
+  }
+  
+.allmedia {
+	padding-top: 5px;
+	
+}
+
+.linkbutton {
+	padding-top: 5px;
+	margin-right: 10px;
 	display: inline-block;
 	width: 20px;
 	height: 20px;
   }
-  
+
+.videobutton {
+	padding-top: 5px;
+	margin-right: 6px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+  }
+
+.imagebutton{
+	padding-top: 5px;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+  }
+
 .link-title::before {
 	content: url("https://svgshare.com/i/qgd.svg");
 	margin-right: 5px;
@@ -108,11 +132,6 @@ strong { font-weight: bold; }
 
 .link-title {
 	padding: 8px;
-}
-
-a {
-	text-decoration: underline 2px;
-	text-underline-offset: 4px;
 }
 
 /* || PARTS OF THE WEBSITE */
@@ -146,6 +165,12 @@ main{
 	display: inline-block;
 }
 
+.row {
+	display: flex;
+	flex-direction: row;
+	gap: var(--padding);
+	margin-bottom: var(--padding);
+}
 
 /* || TYPOGRAPHY*/
 
@@ -181,7 +206,9 @@ body {
 
 .small{ 
 	font-size: var(--text-xs);
+	display: inline;
 }
+
 
 
 
@@ -217,16 +244,11 @@ body{
 		width: 25vw;
 		height: 5100px;
 	}
-
-	/* body{
-		background-color: lightcoral;
-	} */
 }
-
 
 .red {
 	border: 3px solid var(--main-color);
-	box-shadow: 10px 10px 0px var(--main-color);
+	box-shadow: 6px 6px 0px var(--main-color);
 }
 
 .red:hover, .red:active {
@@ -277,7 +299,7 @@ li:hover {
 
 /* button */
 
-button {
+.button {
 	transition: 0.3s;
 	display: block;
 	color: white;
@@ -292,9 +314,11 @@ button {
 	16px 0px 0px -8px black, 
 	-16px 0px 0px -8px black;
 	margin: 8px;
+	width: fit-content;
+	align-items: center;
 }
 
-button:hover {
+.button:hover {
 	transform: translate(-4px, -4px);
 	background-color: rgb(50, 50, 50);
 	box-shadow: 
@@ -305,10 +329,40 @@ button:hover {
 	margin: 8px;
 }
 
+.icon {
+	display: block;
+	height: 20px;
+	width: 20px;
+	margin:auto;
+	margin-top:auto;
+	margin-bottom: auto;
+
+}
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	background-color: white; 
+	padding: 15px;
+	z-index: 99;
+
+	transition: 0.3s;
+	border: 3px solid black;
+	box-shadow: 4px 4px 0px var(--main-color);
+  }
+  
+#myBtn:hover {
+	transform: translate(-4px, -8px);
+	box-shadow: 0px 0px 0px var(--main-color);
+	
+  }
+
 /* || ANIMATION */
 
 .scroll-left {
-margin-top: -100px;
+margin-top: -60px;
 overflow: hidden;
 height: var(--height); 
 position: relative;
@@ -347,4 +401,3 @@ transform: translateX(100%);
 transform: translateX(-100%); 
 }
 }
-

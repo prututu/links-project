@@ -152,7 +152,7 @@ main{
 
 .channel-owner, .channel-collaborator {
 	font-family: 'Argent';
-	line-height: 90%;
+	line-height: 50%;
 	font-style: italic;
 	font-size: var(--text-xs);
 }

@@ -133,8 +133,8 @@ main{
 	padding: var(--padding);
 	gap: 200px;
 	margin-bottom: 10px;
-	background-color: black;
-	color: white;
+	border-bottom: 3px solid black;
+
 }
 
 .together {
@@ -215,7 +215,7 @@ body{
 	box-shadow: 10px 10px 0px var(--main-color);
 }
 
-.red:hover{
+.red:hover, .red:active {
 	border: 3px solid var(--main-color);
 	box-shadow: 0px 0px 0px var(--main-color);
 }

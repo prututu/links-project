@@ -149,12 +149,12 @@ main{
 	padding: var(--padding);
 
 }
-
+ 
 .channel-owner, .channel-collaborator {
 	font-family: 'Argent';
 	line-height: 50%;
 	font-style: italic;
-	font-size: var(--text-base);
+	font-size: 20px;
 }
 
 .ownercollaborator {

@@ -1,44 +1,39 @@
 /* These styles are just to make it easier to see the blocks, initially. */
 strong { font-weight: bold; }
 
-/* body,
-section,
-ul,
-figure {
-	display: grid;
-	gap: 1em;
-} */
-
-/* || TYPOGRAPHY */
-
-/* Mori */
-
-/*|| TYPOGRAPHY */
-
 @font-face {
 	font-family: 'NeueBit';
-	src: url('assets/PPNeueBit-Regular.woff2');
+	src: url('PPNeuebit/PPNeueBit-Regular.woff2');
 	font-weight: 400;
  }
 
 @font-face {
 	font-family: 'NeueBit';
-	src: url('assets/PPNeueBit-Bold.woff2');
+	src: url('PPNeuebit/PPNeueBit-Bold.woff2');
 	font-weight: 700;
  }
+
+/* Mondwest */
+
+@font-face {
+	font-family: 'Mondwest';
+	src: url('PPMondwest/PPMondwest-Regular.woff2');
+	font-weight: 400;
+ }
+
+@font-face {
+	font-family: 'Mondwest';
+	src: url('PPMondwest/PPMondwest-Bold.woff2');
+	font-style: bold;
+	font-weight: 700;
+}
+
 
 /* Argent */
 
 @font-face {
 	font-family: 'Argent';
 	src: url('Argent/ArgentPixelCF-Italic.woff2');
- }
-
-/* Neuebit */
-
-@font-face {
-	font-family: 'Neuebit';
-	src: url('PPNeuebit/PPNeueBit-Regular.woff2');
 	weight: 400px;
 }
 
@@ -49,32 +44,35 @@ figure {
 
 :root{
     --border-radius:12px;
-    --gap: 40px;
-    --padding: 40px;
+    --gap: 30px;
+    --padding: 30px;
 
     --bg-color: rgb(255, 255, 255);
 	--main-color: black;
 
 	--gallery-height: none;
+	--height: 100px;
 
 
     /* typescale */
   
-    --text-xl: calc(var(--text-base)*4);
+    --text-xl: calc(var(--text-base)*6);
 	--text-lg: calc(var(--text-base)*1.125);
 	--text-base: 30px;
 	--text-sm: calc(var(--text-base)*0.875);
 	--text-xs: calc(var(--text-base)*0.6);
 
 	--gallery-height: 5000px;
-  
+	--des-width: 90vw;
+	--height: 350px;
 }
 
 /* || DESKTOP */
 
-@media (min-width:550px) {
+@media (min-width:650px) {
     :root {
-    --bg-color: rgb(230, 230, 230);
+	--padding: 30px;
+	--des-width: 80vw;
 
 	/* typescale */
 
@@ -112,16 +110,38 @@ a {
 	text-underline-offset: 4px;
 }
 
+/* || PARTS OF THE WEBSITE */
+
 body {
 	font-family: 'Neuebit', monospace;
-	background-color: var(--bg-color);
 	font-size: var(--text-base);
 	
 }
 
 main{
 	padding: var(--padding);
+
 }
+
+.channel-owner, .channel-collaborator {
+	font-family: 'Argent';
+	font-style: italic;
+}
+
+.ownercollaborator {
+	display: flex;
+	padding: var(--padding);
+	gap: 200px;
+	margin-bottom: 10px;
+	background-color: black;
+	color: white;
+}
+
+.together {
+	display: inline-block;
+}
+
+
 /* || TYPOGRAPHY*/
 
 h1 {
@@ -130,11 +150,19 @@ h1 {
     font-size: var(--text-xl);
 }
 
-p{
-    font-family: 'Neuebit', monospace;
-    font-weight: 400;
-    font-size: var(--text-base);
-	
+
+body {
+	font-family: 'NeueBit';
+}
+
+.channel-description {
+	max-width: var(--des-width);
+	font-family: 'mondwest';
+	font-weight: 400;
+}
+
+.bottom-padding {
+	padding-bottom: var(--padding);
 }
 
 .small{ 
@@ -142,26 +170,45 @@ p{
 }
 
 
+
+
 /* || Blocks */
 
 .image-blocks {
+	transition: 0.3s;
 	display: flex;
 	flex-direction: column;
 	gap: var(--gap) var(--gap);
 	flex-wrap: wrap;
-	max-width: 250px;
-	/* max-height: var(--gallery-height); */
-
-	/* display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	grid-gap: 20px;
-	gap: var(--gap) var(--gap);
-	 */
+	width: 82vw;
 }
 
-.image-block{
-	height: auto;
+body{
+	background-color: white;
 }
+
+@media (min-width:650px) {
+    .image-blocks {
+		width: 40vw;
+		height: 7200px;
+	}
+
+	/* body{
+		background-color: gold;
+	} */
+}
+
+@media (min-width:800px) {
+    .image-blocks {
+		width: 25vw;
+		height: 5100px;
+	}
+
+	/* body{
+		background-color: lightcoral;
+	} */
+}
+
 
 .red {
 	border: 3px solid var(--main-color);
@@ -201,7 +248,8 @@ figure.img {
 .image {
 	border-top: 3px solid var(--main-color);
 	border-bottom: 3px solid var(--main-color);
-	min-width: 250px;
+	width: 100%;
+	margin-bottom: -8px;
 }
 
 li {
@@ -216,8 +264,8 @@ li:hover {
 /* button */
 
 button {
+	transition: 0.3s;
 	display: block;
-	border: black 1px solid;
 	color: white;
 	padding-top: 8px;
 	padding-bottom: 10px;
@@ -232,18 +280,23 @@ button {
 	margin: 8px;
 }
 
-/* button::after {
-	content: url("https://svgshare.com/f/qj4");
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-} */
+button:hover {
+	transform: translate(-4px, -4px);
+	background-color: rgb(50, 50, 50);
+	box-shadow: 
+	8px 0px 0px -4px  rgb(50, 50, 50), 
+	-8px 0px 0px -4px  rgb(50, 50, 50), 
+	16px 0px 0px -8px  rgb(50, 50, 50), 
+	-16px 0px 0px -8px  rgb(50, 50, 50);
+	margin: 8px;
+}
 
-/* scrolling animation   */
+/* || ANIMATION */
 
 .scroll-left {
-height: 500px; 
+margin-top: -100px;
 overflow: hidden;
+height: var(--height); 
 position: relative;
 }
 .scroll-left h1 {
@@ -260,9 +313,8 @@ text-align: center;
 transform:translateX(100%);
 
 /* Apply animation to this element */ 
--moz-animation: scroll-left 10s linear infinite;
--webkit-animation: scroll-left 10s linear infinite;
-animation: scroll-left 10s linear infinite;
+-webkit-animation: scroll-left 30s linear infinite;
+animation: scroll-left 30s linear infinite;
 }
 
 /* Move it (define the animation) */
@@ -281,3 +333,4 @@ transform: translateX(100%);
 transform: translateX(-100%); 
 }
 }
+

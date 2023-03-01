@@ -10,38 +10,64 @@
 	</head>
 	<body>
 	<!-- Title	 -->
+
+	<section class="ownercollaborator bottom-padding">
+		<div>
+			<p>collection by:</p> 
+			<ul class="channel-owner"></ul>
+		</div>
+		<div>
+			<p>website & contributions by:</p> 
+			<ul class="channel-collaborator"></ul>
+		</div>
+	</section>
+	
+	<main> 
+		<button>
+		<a href="https://www.are.na/masha-vareva/dithering-dcxcdk7zoco" id="channel-url"> visit are.na <span class="small">&#10039&#10039</span></a>
+		</button>
+	</main>
+	
 	<header>
 		<div class="scroll-left">
-		<h1 class="channel-title"></h1> <!-- The channel title will be inserted inside this h1. -->
+		<h1 class="channel-title"></h1> 
 		</div>
-	</header>
+	</header class="bottom-padding">
+
 	<!-- everything else -->
 	<main>
 		<section>
-			<!-- button -->
-			<button>
-				<a href="https://www.are.na/masha-vareva/dither-qbnmhc7difo" id="channel-url"> visit are.na <span class="small">&#10039&#10039</span></a>
-			</button>
+			<!-- How many blocks. -->
+			<h2 class="channel-count bottom-padding"></h2> 
+			
 			<!-- channel description -->
-			<div class="channel-description"></div>
-			<p>curated by</p><ul class="channel-owner"></ul>
-		</section>
-		<section>
-			<h2 class="channel-count"></h2> <!-- How many blocks. -->
+			<div class="channel-description bottom-padding"></div>
+		
+			<!-- channel owner + collaborator -->
+
 			<!-- All the channel “blocks” will be created as children, here. -->
 			<!-- You could move the classes to different section elements to separate the types! -->
-			<ul class="audio-embed-blocks audio-file-blocks image-blocks embed-blocks link-blocks pdf-blocks text-blocks video-embed-blocks video-file-blocks">
+			<ul class="image-blocks link-blocks video-embed-blocks video-file-blocks">
 			</ul>
 		</section>
 
-
-
-		<template id="channel-owner">
-			<li>
-					<p class="full-name"></p> <!-- Username inserts here. -->
-				</a>
-			</li>
-		</template>
+	<section class="flex">
+	<div><!-- Template for the channel owner. -->
+			<template id="channel-owner">
+				<li>
+						<p class="full-name"></p> <!-- Username inserts here. -->
+				</li>
+			</template>
+	</div>
+	<div>
+	<!-- And collaborator. -->
+	<template id="channel-collaborator">
+		<li>
+				<p class="full-name"></p>
+		</li>
+	</template>
+	</div>
+	</section>
 
 		<!-- Images. -->
 		<template id="image-block">
@@ -56,11 +82,11 @@
 							<img src="assets/shade.svg" class="svg">
 						</div>			
 					</section>
-					<picture>
+					<!-- <picture> -->
 						<source class="image-display">
 						<img class="image">
-					</picture>
-				<!-- </figure> -->
+					<!-- </picture>
+				</figure> -->
 			</li>
 		</template>
 

@@ -67,6 +67,7 @@ strong { font-weight: bold; }
 	--gallery-height: 5000px;
 	--des-width: 90vw;
 	
+	--display: block;
 }
 
 /* || DESKTOP */
@@ -90,6 +91,8 @@ strong { font-weight: bold; }
 /* LINKS */
 
 /* \00a0 is space */
+
+
 .arena {
 	padding-top: 5px;
   }
@@ -170,6 +173,7 @@ main{
 	flex-direction: row;
 	gap: var(--padding);
 	margin-bottom: var(--padding);
+	overflow: hidden;
 }
 
 /* || TYPOGRAPHY*/

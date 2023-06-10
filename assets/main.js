@@ -35,24 +35,32 @@ function topFunction() {
   window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
-
   function openOverlay(imageElement) {
     // Create the overlay element
     var overlay = document.createElement("div");
     overlay.className = "overlay";
-    
+  
     // Create the image element for the overlay
     var overlayImage = document.createElement("img");
     overlayImage.src = imageElement.src;
-    
+  
     // Append the overlay image to the overlay element
     overlay.appendChild(overlayImage);
-    
+  
     // Append the overlay to the document body
     document.body.appendChild(overlay);
-    
+  
     // Add a click event listener to the overlay to close it when clicked
-    overlay.addEventListener("click", function() {
-      document.body.removeChild(overlay);
+    overlay.addEventListener("click", function () {
+      overlay.classList.remove("active");
+      setTimeout(function () {
+        document.body.removeChild(overlay);
+      }, 300); // Delay removal to allow for smooth transition
     });
+  
+    // Trigger the smooth transition by adding the "active" class
+    setTimeout(function () {
+      overlay.classList.add("active");
+    }, 0);
   }
+  

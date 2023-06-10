@@ -426,9 +426,24 @@ transform: translateX(-100%);
 	justify-content: center;
 	align-items: center;
 	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+  
+  .overlay.active {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.3s ease;
   }
   
   .overlay img {
 	max-width: 80%;
 	max-height: 80%;
+	transform: scale(0);
+	transition: transform 0.3s ease;
+  }
+  
+  .overlay.active img {
+	transform: scale(1);
   }

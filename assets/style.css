@@ -219,13 +219,9 @@ body {
 	display: inline;
 }
 
-
-
-
-
 /* || Blocks */
 
-.image-blocks {
+.image-blocks, .link-blocks, .video-embed-blocks, .video-file-blocks {
 	transition: 0.3s;
 	display: flex;
 	flex-direction: column;
@@ -235,12 +231,16 @@ body {
 	height: 4400px;
 }
 
+.smaller {
+
+}
+
 body{
 	background-color: white;
 }
 
 @media (min-width:650px) {
-    .image-blocks {
+    .image-blocks, .link-blocks, .video-embed-blocks, .video-file-blocks {
 		max-width: 40vw !important;
 		height: 7800px;
 	}
@@ -251,7 +251,7 @@ body{
 }
 
 @media (min-width:800px) {
-    .image-blocks {
+    .image-blocks, .link-blocks, .video-embed-blocks, .video-file-blocks {
 		max-width: 25vw !important;
 		height: 5400px;
 	}

@@ -36,4 +36,23 @@ function topFunction() {
   }
 
 
-  
+  function openOverlay(imageElement) {
+    // Create the overlay element
+    var overlay = document.createElement("div");
+    overlay.className = "overlay";
+    
+    // Create the image element for the overlay
+    var overlayImage = document.createElement("img");
+    overlayImage.src = imageElement.src;
+    
+    // Append the overlay image to the overlay element
+    overlay.appendChild(overlayImage);
+    
+    // Append the overlay to the document body
+    document.body.appendChild(overlay);
+    
+    // Add a click event listener to the overlay to close it when clicked
+    overlay.addEventListener("click", function() {
+      document.body.removeChild(overlay);
+    });
+  }

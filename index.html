@@ -126,7 +126,7 @@
 	<!-- Images. -->
 		<template id="image-block">
 			<li class="red">
-				<!-- <figure class="image-block"> -->
+				<figure class="image-block">
 					<!-- bar -->
 					<section class="bar">
 						<div>
@@ -136,11 +136,11 @@
 							<img src="assets/shade.svg" class="svg">
 						</div>			
 					</section>
-					<!-- <picture> -->
+					<picture>
 						<source class="image-display">
-						<img class="image">
-					<!-- </picture>
-				</figure> -->
+						<img class="image imgoverlay" onclick="openOverlay(this)">
+					</picture>
+				</figure>
 			</li>
 		</template>
 

@@ -44,7 +44,7 @@ strong { font-weight: bold; }
 
 :root{
     --border-radius:12px;
-    --gap: 30px;
+    --gap: 20px;
     --padding: 30px;
 
     --bg-color: rgb(255, 255, 255);
@@ -96,6 +96,10 @@ strong { font-weight: bold; }
 .arena {
 	padding-top: 5px;
   }
+  
+.paddingleft{
+	padding-left:var(--padding);
+}
   
 .allmedia {
 	padding-top: 5px;
@@ -227,7 +231,8 @@ body {
 	flex-direction: column;
 	gap: var(--gap) var(--gap);
 	flex-wrap: wrap;
-	width: 82vw;
+	max-width: 40vw !important;
+	height: 4400px;
 }
 
 body{
@@ -236,8 +241,8 @@ body{
 
 @media (min-width:650px) {
     .image-blocks {
-		width: 40vw;
-		height: 7200px;
+		max-width: 40vw !important;
+		height: 7800px;
 	}
 
 	/* body{
@@ -247,8 +252,8 @@ body{
 
 @media (min-width:800px) {
     .image-blocks {
-		width: 25vw;
-		height: 5100px;
+		max-width: 25vw !important;
+		height: 5400px;
 	}
 }
 
@@ -407,3 +412,4 @@ transform: translateX(20%);
 transform: translateX(-100%); 
 }
 }
+

@@ -25,11 +25,8 @@ switchButton.onclick = () => { // Attach the event.
 	textBlock.classList.toggle(highlightClass); // Toggle the class!
 };
 
-
-
 // Get all of my images blocks
 let imageBlocks = document.querySelectorAll('li.image-block')
-
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -37,3 +34,6 @@ function topFunction() {
 	// document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   window.scrollTo({top: 0, behavior: 'smooth'});
   }
+
+
+  

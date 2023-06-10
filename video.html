@@ -107,90 +107,90 @@
 
 	
 
+
 	<!-- || TEMPLATES -->
 
 	<!-- channel owner. -->
-		<template id="channel-owner">
-			<li>
-					<p class="full-name"></p> <!-- Username inserts here. -->
-			</li>
-		</template>
-	<!-- And collaborator. -->
-		<template id="channel-collaborator">
-			<li>
-					<p class="full-name"></p>
-			</li>
-		</template>
-	
-	<!-- Images. -->
-		<template id="image-block">
-			<li class="red">
-				<!-- <figure class="image-block"> -->
-					<!-- bar -->
-					<section class="bar">
-						<div>
-							<img src="assets/x.svg" class="svg" id="example">
-						</div>	
-						<div>
-							<img src="assets/shade.svg" class="svg">
-						</div>			
-					</section>
-					<!-- <picture> -->
-						<source class="image-display">
-						<img class="image">
-					<!-- </picture>
-				</figure> -->
-			</li>
-		</template>
+	<template id="channel-owner">
+		<li>
+				<p class="full-name"></p> <!-- Username inserts here. -->
+		</li>
+	</template>
+<!-- And collaborator. -->
+	<template id="channel-collaborator">
+		<li>
+				<p class="full-name"></p>
+		</li>
+	</template>
 
-	<!-- links -->
-		<template id="link-block">
-			<li class="red">
-				<figure class="link-block">
-					<!-- bar -->
-					<section class="bar">
-						<div>
-							<img src="assets/x.svg" class="svg">
-						</div>	
-						<div>
-							<img src="assets/shade.svg" class="svg">
-						</div>			
-					</section>
-					<picture>
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link">
-						<p class="link-title"></p>
-					</a>
+<!-- Images. -->
+	<template id="image-block">
+		<li class="red">
+			<figure class="image-block">
+				<!-- bar -->
+				<section class="bar">
+					<div>
+						<img src="assets/x.svg" class="svg" id="example">
+					</div>	
+					<div>
+						<img src="assets/shade.svg" class="svg">
+					</div>			
+				</section>
+				<picture>
+					<source class="image-display">
+					<img class="image imgoverlay" onclick="openOverlay(this)">
+				</picture>
+			</figure>
+		</li>
+	</template>
 
-				</figure>
-			</li>
-		</template>
+<!-- links -->
+	<template id="link-block">
+		<li class="red">
+			<figure class="link-block">
+				<!-- bar -->
+				<section class="bar">
+					<div>
+						<img src="assets/x.svg" class="svg">
+					</div>	
+					<div>
+						<img src="assets/shade.svg" class="svg">
+					</div>			
+				</section>
+				<picture>
+					<source class="image-display">
+					<img class="image">
+				</picture>
+				<a class="link">
+					<p class="link-title"></p>
+				</a>
 
-	<!-- YouTube, Vimeo, etc. -->
-		<template id="video-embed-block">
-			<li class="red">
-				<figure class="video-embed-block">
-					<!-- bar -->
-					<section class="bar">
-						<div>
-							<img src="assets/x.svg" class="svg">
-						</div>	
-						<div>
-							<img src="assets/shade.svg" class="svg">
-						</div>			
-					</section>
-					<picture>
-						<source class="image-display">
-						<img class="image">
-					</picture>
-					<a class="link"></a>
-				</figure>
-			</li>
-		</template>
+			</figure>
+		</li>
+	</template>
 
-	</main>
+<!-- YouTube, Vimeo, etc. -->
+	<template id="video-embed-block">
+		<li class="red">
+			<figure class="video-embed-block">
+				<!-- bar -->
+				<section class="bar">
+					<div>
+						<img src="assets/x.svg" class="svg">
+					</div>	
+					<div>
+						<img src="assets/shade.svg" class="svg">
+					</div>			
+				</section>
+				<picture>
+					<source class="image-display">
+					<img class="image">
+				</picture>
+				<a class="link"></a>
+			</figure>
+		</li>
+	</template>
+
 		
 	
 	</body>
